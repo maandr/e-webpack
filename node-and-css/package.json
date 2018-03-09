@@ -18,6 +18,7 @@
     "refresh": "rm -rf ./node_modules && yarn install",
     "clean": "rm -rf dist",
     "prebuild": "yarn run clean",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "start": "open index.html"
   }
 }

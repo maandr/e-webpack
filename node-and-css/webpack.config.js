@@ -1,16 +1,16 @@
-const path = require('path')
-const webpack = require('webpack')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const path = require("path")
+const webpack = require("webpack")
+const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
-    context: path.resolve(__dirname, 'src'),
+    context: path.resolve(__dirname, "src"),
     entry: {
-        "math.app": './app.js',
-        "math.lib": './lib.js'
+        "math.app": "./app.js",
+        "math.lib": "./lib.js"
     },
     output: {
-        path: path.resolve(__dirname, 'dist'),
-        filename: '[name].bundle.js' // [name] will be replace with the key of the corresponding entry
+        path: path.resolve(__dirname, "dist"),
+        filename: "[name].bundle.js" // [name] will be replace with the key of the corresponding entry
     },
     module: {
         rules: [
