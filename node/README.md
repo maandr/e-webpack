@@ -8,13 +8,14 @@ brew install yarn
 # Integrate webpack into the build process
 
 First install webpack to our local project.
-```
+
+```bash
 yarn add --dev webpack webpack-dev-server webpack-cli
 ```
 
 Next declare a webpack configuration by creating a `webpack.config.js` file in the root of the project directory.
 
-```
+```js
 const path = require('path')
 const webpack = require('webpack')
 
@@ -34,7 +35,7 @@ Next run webpack with `npx webpack`. The `npx` command, ships with node 8.2+ run
 
 This command can be automated into a npm script by defining a build script in the `package.json`.
 
-```
+```json
   "scripts": {
     "build": "npx webpack"
   }
