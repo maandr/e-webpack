@@ -32,7 +32,7 @@ module.exports = {
 }
 ```
 
-### 3. Load images in css
+### 3. Load images in css or javascript
 
 Images can then be referenced in a relative manner in css and the webpack file-loader will take care of replacing each file reference with the path of the bundled file.
 
@@ -44,3 +44,10 @@ Images can then be referenced in a relative manner in css and the webpack file-l
 }
 ```
 
+In javascript the image can be referenced by importing it as well.
+
+```js
+import Image from "./assets/images/logo.svg"
+```
+
+`Image` variable will contain the final url of that image after processing.
