@@ -12,6 +12,11 @@ Install Yarn.
 brew install yarn
 ```
 
+Initialize an new node project.
+```
+yarn init
+```
+
 ## Getting Started
 
 ### 1. Install webpack to your project
