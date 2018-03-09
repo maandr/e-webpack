@@ -52,5 +52,29 @@ This command can be automated into a npm script by defining a build script in th
   }
 ```
 
+### 5. Build your project using yarn
+
+Now the project can be build using yarn task runner.
+```
+yarn build
+```
+Webpack will bundle create two bundles `math.app.bundle.js` and `math.lib.bundle.js` in the `dist` folder from the two defined entry points.
+
+### 6. Use your bundles
+
+The generated bundles can then be used within your web-application by loading them with a `<script>`-tag.
+
+```html
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Webpack and node</title>
+</head>
+<body>
+  <script src="dist/math.app.bundle.js"></script>
+</body>
+</html>
+```
+
 
 
