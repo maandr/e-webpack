@@ -7,6 +7,7 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^3.0.2",
     "style-loader": "^0.20.3",
@@ -16,8 +17,6 @@
   },
   "scripts": {
     "refresh": "rm -rf ./node_modules && yarn install",
-    "clean": "rm -rf dist",
-    "prebuild": "yarn run clean",
     "build": "npx webpack",
     "start": "open index.html"
   }

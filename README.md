@@ -9,9 +9,6 @@ yarn install
 # Refresh dependencies (remove and re-install)
 yarn refresh
 
-# Clean the dist directory
-yarn clean
-
 # Build the project
 yarn build
 

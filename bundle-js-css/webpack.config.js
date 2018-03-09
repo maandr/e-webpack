@@ -1,5 +1,6 @@
 const path = require("path")
 const webpack = require("webpack")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -24,6 +25,7 @@ module.exports = {
         ]
     },
     plugins: [
-      new ExtractTextPlugin("app.bundle.css")
+        new CleanWebpackPlugin(["dist"]),
+        new ExtractTextPlugin("app.bundle.css")
     ]
 }

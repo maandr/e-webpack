@@ -81,5 +81,31 @@ The generated bundles can then be used within your web-application by loading th
 </html>
 ```
 
+### 7. Clean the dist folder after each build
+
+In order to avoid cluttering in the `dist` directory its a common practice to clean up this folder before each build.
+
+For webpack there is a plugin called `clean-webpack-plugin` that does fulfills this job.
+
+```
+yarn add --dev clean-webpack-plugin
+````
+
+### 8. Configure the clean-webpack-plugin
+
+Next the `clean-webpack-plugin` needs to be configured in the `webpack.config.js`.
+
+```js
+const CleanWebpackPlugin = require("clean-webpack-plugin")
+
+module.exports = {
+  ...
+  plugins: [
+      new CleanWebpackPlugin(["dist"])
+  ]
+}
+```
+
+
 
 

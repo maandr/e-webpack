@@ -7,14 +7,13 @@
   "license": "MIT",
   "private": false,
   "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
     "webpack": "^4.1.1",
     "webpack-cli": "^2.0.10",
     "webpack-dev-server": "^3.1.0"
   },
   "scripts": {
     "refresh": "rm -rf ./node_modules && yarn install",
-    "clean": "rm -rf dist",
-    "prebuild": "rm -rf dist",
     "build": "npx webpack",
     "start": "open index.html"
   }
