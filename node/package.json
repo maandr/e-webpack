@@ -1,5 +1,5 @@
 {
-  "name": "c-webpack",
+  "name": "c-webpack-node",
   "version": "1.0.0",
   "description": "A webpack sandbox project",
   "main": "index.js",
