@@ -1,4 +1,5 @@
-import './assets/css/app.css'
+import './assets/css/main.css'
+import './assets/css/typography.css'
 
 const Math = require('./lib')
 
