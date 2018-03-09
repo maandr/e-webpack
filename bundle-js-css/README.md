@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Setup from project node.
+Setup from project [bundle-js](../bundle-js/README.md)
 
 ## Getting Started
 

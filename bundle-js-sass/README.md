@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-Setup from project node-and-css.
+Setup from project [bundle-js-css](../bundle-js-css/README.md)
 
 ## Getting Started
 
