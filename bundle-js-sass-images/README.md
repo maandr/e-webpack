@@ -2,44 +2,45 @@
 
 ## Prerequisites
 
-Setup from project node-and-css.
+Setup from project [bundle-js-sass](../bundle-js-sass/README.md)
 
 ## Getting Started
 
-### 1. Install a sass loader
+### 1. Install a file loader
 
-Install a sass loader in order to preprocess css-files with sass.
+Install a file loader in order to load files like images.
 
 ```
-yarn add --dev sass-loader node-sass
+yarn add --dev file-loader
 ```
 
-### 2. Configure and chain the sass-loader with the css- and style-loader
+### 2. Configure the file loader for images
 
-Next webpack needs to be configured to that it should load the `sass`-files and compile it trough the sass-preprocessor to `css`. To this is archived by chaining the `css-loader`, `sass-loader` and `style-loader` together in the `webpack.config.js`.
+Next webpack needs to be configured to that it should load all kinds of images.
 
 ```js
 module.exports = {
     ...
     module: {
-        rules: [
-            {
-                test: /\.(s*)css$/, // find .css and .scss
-                use: ExtractTextPlugin.extract({
-                    use: [{
-                        loader: "css-loader"
-                    },
-                    {
-                        loader: "sass-loader"
-                    }],
-                    fallback: "style-loader"
-                })
-            }
-        ]
+        rules: [{
+            test: /\.(png|svg|jpg|jpeg|gif|ico)$/,
+            use: [
+                "file-loader"
+            ]
+        }]
     },
-    plugins: [
-        new ExtractTextPlugin("app.bundle.css")
-    ]
+}
+```
+
+### 3. Load images in css
+
+Images can then be referenced in a relative manner in css and the webpack file-loader will take care of replacing each file reference with the path of the bundled file.
+
+```scss
+#logo {
+  ...
+  background-image: url('../images/logo.svg');
+  ...
 }
 ```
 
