@@ -13,6 +13,7 @@
   },
   "scripts": {
     "prebuild": "rm -rf dist",
-    "build": "npx webpack"
+    "build": "npx webpack",
+    "start": "open index.html"
   }
 }
