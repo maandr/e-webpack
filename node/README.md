@@ -47,6 +47,7 @@ This command can be automated into a npm script by defining a build script in th
 
 ```json
   "scripts": {
+    "prebuild": "rm -rf dist",
     "build": "npx webpack"
   }
 ```
