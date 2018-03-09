@@ -4,7 +4,8 @@ const webpack = require('webpack')
 module.exports = {
     context: path.resolve(__dirname, 'src'),
     entry: {
-        app: './app.js',
+        "math.app": './app.js',
+        "math.lib": './lib.js'
     },
     output: {
         path: path.resolve(__dirname, 'dist'),

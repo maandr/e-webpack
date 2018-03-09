@@ -5,7 +5,7 @@ Install Yarn.
 brew install yarn
 ```
 
-# Install webpack
+# Integrate webpack into the build process
 
 First install webpack to our local project.
 ```
