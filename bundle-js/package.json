@@ -12,6 +12,8 @@
     "webpack-dev-server": "^3.1.0"
   },
   "scripts": {
+    "refresh": "rm -rf ./node_modules && yarn install",
+    "clean": "rm -rf dist",
     "prebuild": "rm -rf dist",
     "build": "npx webpack",
     "start": "open index.html"
