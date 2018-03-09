@@ -1,0 +1,22 @@
+{
+  "name": "c-webpack-node-css",
+  "version": "1.0.0",
+  "description": "A webpack sandbox project",
+  "main": "index.js",
+  "author": "Mats Andresen <mats.andresen@gmx.de>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "css-loader": "^0.28.10",
+    "style-loader": "^0.20.3",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "scripts": {
+    "refresh": "rm -rf ./node_modules && yarn install",
+    "clean": "rm -rf dist",
+    "prebuild": "yarn run clean",
+    "build": "npx webpack"
+  }
+}
