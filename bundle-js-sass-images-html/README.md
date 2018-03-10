@@ -31,3 +31,26 @@ module.exports = {
     ]
 }
 ```
+
+### 3. Configure webpack-dev-server
+
+Webpack brings it's own dev-server that is able to watch a specified directory and refresh the browser each time a watched file changes.
+
+It can be configured in the `webpack.config.js`.
+
+```js
+module.exports = {
+    ...
+    devServer: {
+        contentBase: "./dist"
+    }
+}
+```
+
+Next adjust the `start` script in the `package.json` to launch the webpack-dev-server.
+
+```json
+  "scripts": {
+    "start": "npx webpack-dev-server --open"
+  }
+```

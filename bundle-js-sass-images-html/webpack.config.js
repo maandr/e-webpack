@@ -14,6 +14,9 @@ module.exports = {
         path: path.resolve(__dirname, "dist"),
         filename: "[name].bundle.js" // [name] will be replace with the key of the corresponding entry
     },
+    devServer: {
+        contentBase: "./dist"
+    },
     module: {
         rules: [
             {

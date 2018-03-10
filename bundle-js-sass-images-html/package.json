@@ -17,11 +17,11 @@
     "style-loader": "^0.20.3",
     "webpack": "^3.0.2",
     "webpack-cli": "^2.0.10",
-    "webpack-dev-server": "^3.0.0"
+    "webpack-dev-server": "^2.11.1"
   },
   "scripts": {
     "refresh": "rm -rf ./node_modules && yarn install",
     "build": "npx webpack",
-    "start": "open dist/index.html"
+    "start": "npx webpack-dev-server --open"
   }
 }
