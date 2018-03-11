@@ -1,4 +1,4 @@
-# Webpack with pure node and javascript
+# Webpack with express server
 
 ## Prerequisites
 
