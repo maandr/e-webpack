@@ -63,3 +63,35 @@ app.listen(port, function(error) {
 })
 ```
 
+### 3. Configure webpack to use express and HMR
+
+Next configure webpack to use hot module replacement and specify a public path that will be used by express to start serving contents.
+
+```js
+const webpack = require("webpack")
+
+module.exports = {
+    ...
+    output: {
+        ...
+        publicPath: "/"
+    },
+    plugins: [
+        ...
+        new webpack.HotModuleReplacementPlugin()
+    ]
+}
+```
+
+### 4. Create some start scripts
+
+Finally create some start scripts in the `package.json` for convenience.
+
+```json
+  "scripts": {
+    ...
+    "prestart": "yarn build",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development node server.js"
+  }
+```
