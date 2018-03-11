@@ -1,0 +1,14 @@
+@import "typography";
+
+$primary-color: #333;
+
+body {
+  background-color: $primary-color;
+}
+
+#logo {
+  width: 190px;
+  height: 200px;
+  background-image: url('../images/logo.svg');
+  background-repeat: no-repeat;
+}
