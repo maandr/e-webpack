@@ -1,0 +1,23 @@
+{
+  "name": "c-webpack-bundle-js",
+  "version": "1.0.0",
+  "description": "A webpack sandbox project",
+  "main": "index.js",
+  "author": "Mats Andresen <mats.andresen@gmx.de>",
+  "license": "MIT",
+  "private": false,
+  "devDependencies": {
+    "clean-webpack-plugin": "^0.1.19",
+    "rimraf": "^2.6.2",
+    "ts-loader": "^4.0.1",
+    "typescript": "^2.7.2",
+    "webpack": "^4.1.1",
+    "webpack-cli": "^2.0.10",
+    "webpack-dev-server": "^3.1.0"
+  },
+  "scripts": {
+    "refresh": "rimraf ./node_modules && yarn install",
+    "build": "npx webpack",
+    "start": "open index.html"
+  }
+}
